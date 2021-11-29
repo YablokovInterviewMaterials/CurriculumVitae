@@ -1,0 +1,35 @@
+body {
+    counter-reset: h3
+}
+
+h3 {
+    counter-reset: h4
+}
+
+h3:before {
+    counter-increment: h3;
+    content: counter(h3) ". "
+}
+
+h4:before {
+    counter-increment: h4;
+    content: counter(h3) "." counter(h4) ". "
+}
+
+.ShowOnMobile {
+    display: none;
+}
+
+.HideOnMobile {
+    display: inline;
+}
+
+/* Smartphone Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .ShowOnMobile {
+        display: inline;
+    }
+    .HideOnMobile {
+        display: none;
+    }
+}

@@ -1,0 +1,14 @@
+theme: jekyll-theme-slate
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+#pandoc:
+#  skip: false
+#  impose: false
+#  output: ./tmp
+#  flags: '--smart'
+#  site_flags:
+#  outputs:
+#    pdf: '--latex-engine=pdflatex --toc --include-in-header=./_includes/latex_header.tex -V geometry:margin=1in -V header'
+#    epub:
+#    markdown:
