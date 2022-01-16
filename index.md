@@ -33,20 +33,18 @@
   <li>ФИО: Яблоков Максим Вадимович</li>
   <li>дата рождения: 28.12.1992
     <ul>
-      <li>возраст: <span id="age">N</span> лет</li>
+      <li>возраст: <span id="age-in-years">years</span>, <span id="age-in-months-within-last-year">months</span></li>
     </ul>
   </li>
   <li>номер телефона: +7 (953) 513-24-86</li>
   <li>e-mail: <a href="mailto:StateItPrimitive@gmail.com">StateItPrimitive@gmail.com</a></li>
   <li>социальные сети:
     <ul>
-      <li><a href="https://t.me/StateItPrimitive">telegram</a></li>
-      <li><a href="https://vk.com/user_stateitprimitive">vk</a></li>
+      <li>telegram: <a href="https://t.me/StateItPrimitive">StateItPrimitive</a></li>
+      <li>vk: <a href="https://vk.com/user_stateitprimitive">user_stateitprimitive</a></li>
     </ul>
   </li>
 </ul>
-
-<script>document.getElementById("age").innerHTML = Math.trunc((new Date().getTime() - Date.UTC(1992, 12, 28)) / (1000 * 60 * 60 * 24 * 365));</script>
 
 </div>
 
@@ -65,6 +63,9 @@
 </div>
 
 ### <a name="work-experience"></a> Опыт работы
+
+Стаж профессиональной деятельности: <span id="experience-in-years">years</span>, 
+<span id="experience-in-months-within-last-year">months</span>.
 
 #### <a name="work-experience_step-1"></a> Разработчик C++ (RS Bank 5.5 / R-Style Softlab)
 
@@ -464,3 +465,45 @@ _P.S. Не во всем солидарен с материалом, излож�
 Владею определенными навыками разработки в игровом движке Unity3D, а также в определенной мере владею 3Ds Max.
 Примером использования данных навыков является собственная [трехмерная игра (шутер) в Unity3D
 (игровая логика написана на языке C#)](https://drive.google.com/file/d/0B1E1-m-HTT5qdGQtVVhQaUNUVG8/view?usp=sharing).
+
+<script>
+function updateYearsAndMonths(elementIdPrefix, dateFrom) {
+    const linuxStartTimeYear = 1970;
+    let dateDiff = new Date(Date.now() - dateFrom);
+    document.getElementById(elementIdPrefix + "-in-years").innerHTML = getHumanReadableYears(dateDiff.getUTCFullYear() - linuxStartTimeYear);
+    document.getElementById(elementIdPrefix + "-in-months-within-last-year").innerHTML = getHumanReadableMonths(dateDiff.getMonth() + 1);
+}
+
+function getHumanReadableYears(integerYears) {
+    switch (integerYears) {
+        case 1:
+            return integerYears + " год";
+
+        case 2:
+        case 3:
+        case 4:
+            return integerYears + " года";
+
+        default:
+            return integerYears + " лет";
+    }
+}
+
+function getHumanReadableMonths(integerMonths) {
+    switch (integerMonths) {
+        case 1:
+            return integerMonths + " месяц";
+
+        case 2:
+        case 3:
+        case 4:
+            return integerMonths + " месяца";
+
+        default:
+            return integerMonths + " месяцев";
+    }
+}
+
+updateYearsAndMonths("age", Date.UTC(1992, 12 - 1, 28));
+updateYearsAndMonths("experience", Date.UTC(2014, 6 - 1, 1));
+</script>
