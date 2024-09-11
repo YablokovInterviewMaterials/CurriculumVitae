@@ -8,15 +8,15 @@
     * [Разработчик Java (Сбербанк Онлайн / СберТех)](#work-experience_step-2)
     * [Разработчик C++ (RS Bank 5.5 / R-Style Softlab)](#work-experience_step-1)
 4. [Неосновной род деятельности](#secondary-activity)
-    1. [Выступления на конференциях](#secondary-activity_conference-speeches)
-    2. [Курирование студентов](#secondary-activity_supervising-students)
-    3. [Волонтерство на stack overflow](#secondary-activity_stack-overflow)
+    * [Выступления на конференциях](#secondary-activity_conference-speeches)
+    * [Курирование студентов](#secondary-activity_supervising-students)
+    * [Волонтерство на stack overflow](#secondary-activity_stack-overflow)
 5. [О себе](#about-yourself)
-    1. [Образование](#about-yourself_education)
-    2. [Примеры кода](#about-yourself_code-examples)
-    3. [Рабочие ориентиры](#about-yourself_inspiration)
-    4. [Особенности характера](#about-yourself_character-traits)
-    5. [Прочее](#about-yourself_others)
+    * [Образование](#about-yourself_education)
+    * [Примеры кода](#about-yourself_code-examples)
+    * [Рабочие ориентиры](#about-yourself_inspiration)
+    * [Особенности характера](#about-yourself_character-traits)
+    * [Прочее](#about-yourself_others)
 
 ### <a name="disclaimer"></a> Дисклеймер
 
@@ -114,6 +114,9 @@
     * реализация различных механизмов: защита от дублирующихся маршрутов (с точки зрения предикатов), защита от
       невалидных маршрутов (не позволяет такие сохранить в БД, тем самым сломав работу всех инстансов шлюза),
       детектирование матчинга одного запроса нескольким маршрутам (по их предикатам) и так далее.
+* внедрение open-banking (https://openbankingrussia.ru/) в банк:
+    * участие в интеграции с другими финтех-компаниями посредством open-banking API 
+      (предоставление API с нашей стороны и интеграция с API других компаний). 
 
 </details>
 
